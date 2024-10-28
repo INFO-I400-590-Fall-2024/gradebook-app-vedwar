@@ -22,6 +22,7 @@ const Auth = () => {
       if (action === 'signUp') {
         userCredential = await createUserWithEmailAndPassword(auth, email, password);
         // logEvent(analytics, 'sign_up', { method: 'email' });
+        router.push('/(tabs)/realtimedatasync');
       } else {
         userCredential = await signInWithEmailAndPassword(auth, email, password);
         // logEvent(analytics, 'login', { method: 'email' });

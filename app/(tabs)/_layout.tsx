@@ -27,6 +27,11 @@ export default function TabLayout() {
         options={{
           title: 'Realtime Data Sync',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerRight: () => (
+            <Link href="/" asChild>
+              <LogoutButton />
+            </Link>
+          ),
         }}
       />
       <Tabs.Screen
