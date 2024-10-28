@@ -35,3 +35,5 @@ This step sets up Firebase Hosting and creates necessary configuration files:
 npx expo export -p web
 firebase deploy
 ```
+
+##### Reference: https://docs.expo.dev/distribution/publishing-websites/
