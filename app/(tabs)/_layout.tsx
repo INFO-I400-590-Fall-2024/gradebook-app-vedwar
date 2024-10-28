@@ -1,6 +1,7 @@
 import { Link, Tabs } from 'expo-router';
 
 import { HeaderButton } from '../../components/HeaderButton';
+import { LogoutButton } from '../../components/LogoutButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
 
 export default function TabLayout() {
@@ -10,21 +11,28 @@ export default function TabLayout() {
         tabBarActiveTintColor: 'black',
       }}>
       <Tabs.Screen
-        name="index"
+        name="firebaseexample"
         options={{
-          title: 'Tab One',
+          title: 'Firebase Example',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
-              <HeaderButton />
+            <Link href="/" asChild>
+              <LogoutButton />
             </Link>
           ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="realtimedatasync"
         options={{
-          title: 'Tab Two',
+          title: 'Realtime Data Sync',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="firestoredatasync"
+        options={{
+          title: 'Firestore Data Sync',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
